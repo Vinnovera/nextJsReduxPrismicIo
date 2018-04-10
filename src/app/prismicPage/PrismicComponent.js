@@ -1,7 +1,6 @@
 import React from 'react';
 
 function PrismicComponent ({ cmsContent }) {
-  console.log(888, cmsContent)
   return (
     <div>
       {/*{JSON.stringify(cmsContent[0].data)}*/}

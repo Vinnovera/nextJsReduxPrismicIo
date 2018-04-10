@@ -14,7 +14,6 @@ export default async function getPrismicContent (key) {
   try {
     const api = await Prismic.getApi(PRISMIC_API_ENDPOINT, { accessToken: PRISMIC_API_TOKEN });
     const response = await api.query(Prismic.Predicates.at('document.type', key));
-console.log(123, response.results)
     return response.results;
   } catch (err) {
     console.log(err)

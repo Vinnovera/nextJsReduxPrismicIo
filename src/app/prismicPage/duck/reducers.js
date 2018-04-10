@@ -15,13 +15,10 @@ const prismicReducer = (state = INITIAL_STATE, action) => {
 
     case types.RECEIVE_PRISMIC_CONTENT: {
       const { cmsContent } = action;
-      console.log(333, cmsContent.length)
-      const x = {
+      return {
         ...state,
         cmsContent,
       }
-      console.log(444, x)
-      return x
     }
 
     default:
