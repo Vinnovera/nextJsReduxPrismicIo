@@ -6,5 +6,4 @@ const { Creators, Types } = createActions({
   requestSubredditJson: ['subreddit'],
   receiveSubredditJson: ['subredditData']
 });
-
 export { Creators, Types };

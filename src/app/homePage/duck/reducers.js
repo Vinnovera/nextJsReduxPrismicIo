@@ -3,7 +3,7 @@ import types from './types';
 const INITIAL_STATE = {
   currentCount: 0,
   subreddit: '',
-  showSpinner: false,
+  showRedditSpinner: false,
   subredditData: []
 }
 const homeReducer = (state=INITIAL_STATE, action) => {
@@ -32,7 +32,7 @@ const homeReducer = (state=INITIAL_STATE, action) => {
         ...state,
         subreddit,
         subredditData: [],
-        showSpinner: true
+        showRedditSpinner: true
       }
     }
 
@@ -41,7 +41,7 @@ const homeReducer = (state=INITIAL_STATE, action) => {
       return {
         ...state,
         subredditData,
-        showSpinner: false
+        showRedditSpinner: false
 
       }
     }
