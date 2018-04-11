@@ -1,14 +1,18 @@
 import React from 'react';
-import RichText from '../_global/components/RichText'
-import Title from '../_global/components/Title'
+import Image from '../_global/components/PrismicImage'
+import Link from '../_global/components/PrismicLink'
+import RichText from '../_global/components/PrismicRichText'
+import Title from '../_global/components/PrismicTitle'
 
 function PrismicComponent ({ cmsContent }) {
   return (
-    <div>
+    cmsContent && <div>
       {/*{JSON.stringify(cmsContent.data)}*/}
 
-      <Title text={cmsContent.data.title}/>
-      <RichText text={cmsContent.data.description}/>
+      <Title data={cmsContent.data.page_title}/>
+      <Image document={cmsContent} apiId='top_image'/>
+      <RichText data={cmsContent.data.main_text}/>
+      <Link data={cmsContent.data.link} text="länktext"/>
     </div>
   )
 }
