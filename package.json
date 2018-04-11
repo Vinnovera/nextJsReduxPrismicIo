@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "engines": {
+    "node": ">=0.10.3 <0.12"
+  },
   "scripts": {
     "dev": "next \"src/app\"",
     "build": "NODE_ENV=production next build \"src/app\"",
-    "start": "next start \"src/app\""
+    "start": "next start \"src/app\" -p $PORT",
+    "heroku-postbuild": "next build \"src/app\""
   },
   "dependencies": {
     "cross-fetch": "^2.1.0",
