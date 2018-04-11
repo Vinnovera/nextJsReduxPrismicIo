@@ -13,6 +13,7 @@
     "heroku-postbuild": "next build \"src/app\""
   },
   "dependencies": {
+    "@zeit/next-css": "^0.1.5",
     "cross-fetch": "^2.1.0",
     "dotenv": "^5.0.1",
     "next": "^5.1.0",
