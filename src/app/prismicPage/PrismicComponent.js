@@ -1,12 +1,14 @@
 import React from 'react';
+import RichText from '../_global/components/RichText'
+import Title from '../_global/components/Title'
 
 function PrismicComponent ({ cmsContent }) {
   return (
     <div>
       {/*{JSON.stringify(cmsContent.data)}*/}
 
-      <h1>{cmsContent.data.title[0].text}</h1>
-      <div>{cmsContent.data.description[0].text}</div>
+      <Title text={cmsContent.data.title}/>
+      <RichText text={cmsContent.data.description}/>
     </div>
   )
 }
