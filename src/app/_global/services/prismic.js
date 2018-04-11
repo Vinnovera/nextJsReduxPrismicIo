@@ -10,11 +10,10 @@ const PRISMIC_API_TOKEN = process.env.PRISMIC_API_TOKEN;
  *
  * @returns {array} The array of all documents of the type work
  */
-export default async function getPrismicContent (key) {
+export default async function getPrismicContent (uid) {
   try {
     const api = await Prismic.getApi(PRISMIC_API_ENDPOINT, { accessToken: PRISMIC_API_TOKEN });
-    const response = await api.query(Prismic.Predicates.at('document.type', key));
-    return response.results;
+    return await api.getByUID('about', uid)
   } catch (err) {
     console.log(err)
   }

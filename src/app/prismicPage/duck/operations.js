@@ -4,13 +4,13 @@ import getPrismicContent from '../../_global/services/prismic'
 const requestPrismicContentAction = Creators.requestPrismicContent;
 const receivePrismicContentAction = Creators.receivePrismicContent;
 
-const fetchPrismicContent = (key) => {
+const fetchPrismicContent = (uid) => {
   return async dispatch => {
     try {
 
-      dispatch(requestPrismicContentAction(key));
+      dispatch(requestPrismicContentAction(uid));
 
-      const cmsContent = await getPrismicContent(key)
+      const cmsContent = await getPrismicContent(uid)
       dispatch(receivePrismicContentAction(cmsContent))
 
     } catch (err) {
