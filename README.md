@@ -10,3 +10,4 @@ How to use:
 5. Deployment to heroku is prepared, inspration was found at [https://github.com/mars/heroku-nextjs](https://github.com/mars/heroku-nextjs/blob/master/README.md) as well as [heroku docs](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction)
 This app is deplyed at [https://agile-falls-57944.herokuapp.com](https://agile-falls-57944.herokuapp.com/prismic)
 6. The structure of the app was inspired by [this article by Ashwin Nayar](https://levelup.gitconnected.com/structure-your-react-redux-project-for-scalability-and-maintainability-618ad82e32b7)
+7. The code uses [standardJS](https://standardjs.com) code style

@@ -8,17 +8,17 @@ import { linkResolver } from '../services/prismic'
  * @constructor
  */
 function LinkComponent ({ data, text }) {
-  let target = {};
+  let target = {}
   if (data.target) {
     target = {
       target: data.target,
-      rel: "noopener"
-    };
+      rel: 'noopener'
+    }
   }
 
   return (
     <a href={Link.url(data, linkResolver)} {...target}>{text}</a>
-  );
+  )
 }
 
-export default LinkComponent;
+export default LinkComponent

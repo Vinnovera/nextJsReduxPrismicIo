@@ -11,8 +11,7 @@ export const initStore = (initialState, isServer) => {
       initialState,
       applyMiddleware(thunkMiddleware)
     )
-  }
-  else {
+  } else {
     const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
     if (!store) {
@@ -24,4 +23,4 @@ export const initStore = (initialState, isServer) => {
     }
     return store
   }
-};
+}

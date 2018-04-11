@@ -1,8 +1,8 @@
-import { createActions } from 'reduxsauce';
+import { createActions } from 'reduxsauce'
 
 const { Creators, Types } = createActions({
   incrementCount: ['value'],
-  decrementCount: ['value'],
-});
+  decrementCount: ['value']
+})
 
-export { Creators, Types };
+export { Creators, Types }

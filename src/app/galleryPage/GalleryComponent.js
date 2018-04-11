@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 
 function GalleryComponent ({
-                             currentCount,
-                             onIncrementClick,
-                             onDecrementClick
-                           }) {
+  currentCount,
+  onIncrementClick,
+  onDecrementClick
+}) {
   return (
     <div>
       <p>Current count: {currentCount}</p>
@@ -19,4 +19,4 @@ function GalleryComponent ({
   )
 }
 
-export default GalleryComponent;
+export default GalleryComponent

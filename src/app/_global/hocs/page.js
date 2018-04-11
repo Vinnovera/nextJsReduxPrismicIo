@@ -20,7 +20,7 @@ export default (WrappedComponent) => {
       const store = initStore({}, isServer)
       let pageProps = {}
       if (WrappedComponent.getInitialProps) {
-        pageProps = await WrappedComponent.getInitialProps({ ...ctx, store });
+        pageProps = await WrappedComponent.getInitialProps({ ...ctx, store })
       }
       return {
         ...pageProps,
@@ -42,8 +42,7 @@ export default (WrappedComponent) => {
             <WrappedComponent {...this.props} />
           </Provider>
         </div>
-      );
+      )
     }
   }
-};
-
+}

@@ -1,8 +1,8 @@
-import { createActions } from 'reduxsauce';
+import { createActions } from 'reduxsauce'
 
 const { Creators, Types } = createActions({
   requestPrismicContent: ['key'],
-  receivePrismicContent: ['cmsContent'],
-});
+  receivePrismicContent: ['cmsContent']
+})
 
-export { Creators, Types };
+export { Creators, Types }

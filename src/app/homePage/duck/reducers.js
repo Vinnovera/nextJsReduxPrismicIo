@@ -1,4 +1,4 @@
-import types from './types';
+import types from './types'
 
 const INITIAL_STATE = {
   currentCount: 0,
@@ -6,11 +6,11 @@ const INITIAL_STATE = {
   showRedditSpinner: false,
   subredditData: []
 }
-const homeReducer = (state=INITIAL_STATE, action) => {
-  switch(action.type) {
+const homeReducer = (state = INITIAL_STATE, action) => {
+  switch (action.type) {
     case types.INCREMENT_COUNT: {
-      const { value } = action;
-      const { currentCount } = state;
+      const { value } = action
+      const { currentCount } = state
       return {
         ...state,
         currentCount: currentCount + value
@@ -18,8 +18,8 @@ const homeReducer = (state=INITIAL_STATE, action) => {
     }
 
     case types.DECREMENT_COUNT: {
-      const { value } = action;
-      const { currentCount } = state;
+      const { value } = action
+      const { currentCount } = state
       return {
         ...state,
         currentCount: currentCount - value
@@ -27,7 +27,7 @@ const homeReducer = (state=INITIAL_STATE, action) => {
     }
 
     case types.REQUEST_SUBREDDIT_JSON: {
-      const { subreddit } = action;
+      const { subreddit } = action
       return {
         ...state,
         subreddit,
@@ -37,7 +37,7 @@ const homeReducer = (state=INITIAL_STATE, action) => {
     }
 
     case types.RECEIVE_SUBREDDIT_JSON: {
-      const { subredditData } = action;
+      const { subredditData } = action
       return {
         ...state,
         subredditData,
@@ -46,8 +46,8 @@ const homeReducer = (state=INITIAL_STATE, action) => {
       }
     }
 
-    default: return state;
+    default: return state
   }
 }
 
-export default homeReducer;
+export default homeReducer

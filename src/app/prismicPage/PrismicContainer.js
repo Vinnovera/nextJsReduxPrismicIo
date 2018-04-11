@@ -1,23 +1,23 @@
-import { connect } from 'react-redux';
-import PrismicComponent from './PrismicComponent';
-import { prismicOperations } from './duck';
+import { connect } from 'react-redux'
+import PrismicComponent from './PrismicComponent'
+import { prismicOperations } from './duck'
 
-const PRISMIC_CONTENT_TYPE = 'page';
-const PRISMIC_CONTENT_UID = 'veggies';
+const PRISMIC_CONTENT_TYPE = 'page'
+const PRISMIC_CONTENT_UID = 'veggies'
 
 const mapStateToProps = state => {
-  const { cmsContent } = state.prismic;
+  const { cmsContent } = state.prismic
   return { cmsContent }
-};
+}
 
 const mapDispatchToProps = dispatch => {
   return {}
-};
+}
 
 const PrismicContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(PrismicComponent);
+)(PrismicComponent)
 
 PrismicContainer.getInitialProps = async ({ store, req }) => {
   const isServer = !!req
@@ -25,4 +25,4 @@ PrismicContainer.getInitialProps = async ({ store, req }) => {
   return { initialState: store.getState(), isServer }
 }
 
-export default PrismicContainer;
+export default PrismicContainer

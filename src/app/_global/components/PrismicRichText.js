@@ -11,4 +11,4 @@ function RichTextComponent ({ data }) {
   return RichText.render(data, linkResolver)
 }
 
-export default RichTextComponent;
+export default RichTextComponent

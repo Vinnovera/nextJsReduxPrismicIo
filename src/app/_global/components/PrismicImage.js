@@ -25,18 +25,18 @@
  * @constructor
  */
 function PrismicImageComponent ({ document, apiId }) {
-  const mainView = document.data[apiId];
-  const tabletView = document.data[apiId].Tablet;
-  const mobileView = document.data[apiId].Mobile;
+  const mainView = document.data[apiId]
+  const tabletView = document.data[apiId].Tablet
+  const mobileView = document.data[apiId].Mobile
 
   return (
     <picture>
-      <source media="(max-width: 400px)" srcSet={mobileView.url}/>
-      <source media="(max-width: 900px)" srcSet={tabletView.url}/>
-      <source srcSet={mainView.url}/>
-      <img src={mainView.url} alt={mainView.alt}/>
+      <source media='(max-width: 400px)' srcSet={mobileView.url} />
+      <source media='(max-width: 900px)' srcSet={tabletView.url} />
+      <source srcSet={mainView.url} />
+      <img src={mainView.url} alt={mainView.alt} />
     </picture>
-  );
+  )
 }
 
-export default PrismicImageComponent;
+export default PrismicImageComponent

@@ -1,5 +1,5 @@
-require('dotenv').config();
-const webpack = require('webpack');
+require('dotenv').config()
+const webpack = require('webpack')
 const withCSS = require('@zeit/next-css')
 
 /** Customization so that enviroment variables can be used
@@ -9,14 +9,14 @@ const withCSS = require('@zeit/next-css')
 const css = (nextConfig) => {
   return {
     webpack: (config, options) => {
-      const cssConfig = withCSS({ cssModules: true }).webpack(config, options);
+      const cssConfig = withCSS({ cssModules: true }).webpack(config, options)
       const dotenvConfig = (config) => {
-        config.plugins.push(new webpack.EnvironmentPlugin(process.env));
-        return config;
+        config.plugins.push(new webpack.EnvironmentPlugin(process.env))
+        return config
       }
       return Object.assign({}, cssConfig, dotenvConfig)
     }
   }
 }
 
-module.exports = css;
+module.exports = css

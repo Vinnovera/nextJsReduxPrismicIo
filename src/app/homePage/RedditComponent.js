@@ -1,11 +1,11 @@
-import React from 'react';
-import shortid from 'shortid';
+import React from 'react'
+import shortid from 'shortid'
 
 function RedditComponent ({
-                            subredditData,
-                            showRedditSpinner,
-                            fetchSubredditJson
-                          }) {
+  subredditData,
+  showRedditSpinner,
+  fetchSubredditJson
+}) {
   if (showRedditSpinner) {
     return <p>Loading...</p>
   }
@@ -14,7 +14,7 @@ function RedditComponent ({
     <ul>
       {subredditData.map((data, index) => (
         <li key={shortid.generate()}>
-          <a href={`https://reddit.com${data.url}`} target="_blank">{data.title}</a>
+          <a href={`https://reddit.com${data.url}`} target='_blank'>{data.title}</a>
         </li>
       ))}
       <button onClick={() => fetchSubredditJson('reactjs')}>Show ReactJS subreddits</button>
@@ -22,4 +22,4 @@ function RedditComponent ({
   )
 }
 
-export default RedditComponent;
+export default RedditComponent
