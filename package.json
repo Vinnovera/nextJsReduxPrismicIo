@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "next \"src/app\"",
-    "build": "next build",
-    "start": "next start"
+    "build": "NODE_ENV=production next build \"src/app\"",
+    "start": "next start \"src/app\""
   },
   "dependencies": {
     "cross-fetch": "^2.1.0",
