@@ -7,12 +7,12 @@ function HomeComponent ({
                           onDecrementClick
                         }) {
   return (
-    <div>
+    <main>
       <p>Current count: {currentCount}</p>
       <button onClick={onIncrementClick}>Increment</button>
       <button onClick={onDecrementClick}>Decrement</button>
       <RedditContainer/>
-    </div>
+    </main>
   )
 }
 
