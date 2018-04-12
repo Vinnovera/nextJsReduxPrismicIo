@@ -14,19 +14,21 @@ import { initStore } from '../../store'
 export default (WrappedComponent) => {
   return class extends Component {
     static async getInitialProps (ctx) {
-      const { req } = ctx
-      const isServer = !!req
-      const userAgent = req ? req.headers['user-agent'] : navigator.userAgent
-      const store = initStore({}, isServer)
+      /*** Cannot use ctx.req when exporting to static files *****/
+      // const { req } = ctx
+      // const isServer = !!req
+      // const userAgent = req ? req.headers['user-agent'] : navigator.userAgent
+      // const store = initStore({}, isServer)
+      const store = initStore({})
       let pageProps = {}
       if (WrappedComponent.getInitialProps) {
-        pageProps = await WrappedComponent.getInitialProps({ ...ctx, store })
+        pageProps = await WrappedComponent.getInitialProps({...ctx, store})
       }
       return {
         ...pageProps,
-        initialState: store.getState(),
-        isServer,
-        userAgent
+        initialState: store.getState()
+        // isServer,
+        // userAgent
       }
     }
 

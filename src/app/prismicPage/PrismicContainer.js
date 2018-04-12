@@ -19,10 +19,11 @@ const PrismicContainer = connect(
   mapDispatchToProps
 )(PrismicComponent)
 
-PrismicContainer.getInitialProps = async ({ store, req }) => {
-  const isServer = !!req
+PrismicContainer.getInitialProps = async ({ store }) => {
+  // const isServer = !!req
   await store.dispatch(prismicOperations.fetchPrismicContent(PRISMIC_CONTENT_TYPE, PRISMIC_CONTENT_UID))
-  return { initialState: store.getState(), isServer }
+  // return { initialState: store.getState(), isServer }
+  return { initialState: store.getState() }
 }
 
 export default PrismicContainer
