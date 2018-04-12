@@ -12,7 +12,7 @@
     "start": "next start \"src/app\" -p $PORT",
     "heroku-postbuild": "next build \"src/app\"",
     "export": "next build \"src/app\" && next export \"src/app\"",
-    "postexport": "mv ./src/app/out ./out"
+    "postexport": "rm -rf ./out && mv ./src/app/out ./out"
   },
   "dependencies": {
     "@zeit/next-css": "^0.1.5",

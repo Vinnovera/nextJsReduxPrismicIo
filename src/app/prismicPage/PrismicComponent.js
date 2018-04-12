@@ -4,9 +4,15 @@ import Link from '../_global/components/PrismicLink'
 import RichText from '../_global/components/PrismicRichText'
 import Title from '../_global/components/PrismicTitle'
 
-function PrismicComponent ({ cmsContent }) {
+import Head from 'next/head'
+
+function PrismicComponent ({cmsContent}) {
   return (
     cmsContent && <div>
+      <Head>
+        <title>Prismic page title</title>
+      </Head>
+
       {/* {JSON.stringify(cmsContent.data)} */}
 
       <Title data={cmsContent.data.page_title} />

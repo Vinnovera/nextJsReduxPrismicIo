@@ -5,6 +5,8 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
+          <link rel='shortcut icon' href='/static/favicon.ico' type='image/x-icon' />
+          <link rel='icon' href='/static/favicon.ico' type='image/x-icon' />
           <link rel='stylesheet' href='/_next/static/style.css' />
         </Head>
         <body>

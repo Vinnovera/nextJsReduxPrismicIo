@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 
 function GalleryComponent ({
   currentCount,
@@ -7,6 +8,10 @@ function GalleryComponent ({
 }) {
   return (
     <div>
+      <Head>
+        <title>Gallery page title</title>
+      </Head>
+
       <p>Current count: {currentCount}</p>
       <button onClick={onIncrementClick}>Increment</button>
       <button onClick={onDecrementClick}>Decrement</button>
